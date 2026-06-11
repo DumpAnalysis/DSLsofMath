@@ -1,0 +1,20 @@
+* [[file:Exam_2026-06.pdf][Exam 2026-06]] of the [[../../README.md][DSLsofMath course]]
+** Suggested solutions:
++ [[file:Solution_202606_Algebra.lhs][Part 1: Algebra]]
++ [[file:Solution_202606_Laplace.lhs][Part 2: Laplace]]
++ [[file:Solution_202606_Typing.txt][Part 3: Typing]]
++ [[file:Solution_202606_Proof.lhs][Part 4: Proof]]
+
+* Anonymous results:
+
+To pass you need *a minimum of 5p on each question (1 to 4)*
+and also reach these grade limits: 3: >=48p, 4: >=65p, 5: >=83p, max: 100p.
+
+| P1 |  P2 |  P3 | P4  | Sum  | Grade |
+|----+-----+-----+-----+------+-------|
+| 13 | *0* | *2* | *0* | *15* | U     |
+| 13 |  10 |   9 | 7   | *39* | U     |
+| 16 |  17 |   5 | *1* | *39* | U     |
+| 19 |  20 |   7 | *0* | *46* | U     |
+  
+*Bold* numbers indicate reasons for failing grade.

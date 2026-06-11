@@ -1,0 +1,50 @@
+\paragraph{Solution}
+
+\begin{enumerate}
+\item \textbf{[5p]} Base sets and variables:
+From the text, we can deduce the following types:
+\begin{spec}
+  X, Y, Z :: Type               -- Typically |X = Y = Z = REAL|
+  x :: X
+  y :: Y
+  z :: Z
+  U :: Powerset (X, Y)          -- An open set of points
+  h :: H                        -- Where |H = REAL \ {0}|
+\end{spec}
+
+\item \textbf{[10p]} Functions and operators:
+\begin{spec}
+  f :: U -> Z
+\end{spec}
+For a fixed |y|, the "quantity" |z| is a function of |x|.
+Let's call this family of functions |g y x = f (x, y)|.
+
+From the context, we know that the last line gives the value of the partial derivative at one specific point |(x, y)|.
+Thus |∂z/∂x| is implicitly applied to |(x, y)|.
+We could write |(∂z/∂x)(x,y)  : Z|, giving:
+\begin{spec}
+  (∂z/∂x) :: U -> Z
+\end{spec}
+Generalising the operator |∂/∂x| itself, it takes a function and returns a new function:
+\begin{spec}
+  (∂/∂x) :: (U -> Z) -> (U -> Z)
+\end{spec}
+Similarly, for |f'_x|:
+\begin{spec}
+  f'_x (x,y) :: Z
+  f'_x :: U -> Z
+\end{spec}
+
+\item \textbf{[10p]}  Type and define a higher-order function that builds the argument to |lim| from |f|, |x|, and |y|.
+
+For the limit expression, remember that $(x,y)$ is fixed, so the only "varying variable" here is $h$.
+\begin{spec}
+  lim :: (H -> Z) -> {p | p ∈ ℝ, Limp p H} -> Z
+\end{spec}
+We could name the anonymous function:
+\begin{spec}
+  psi :: (U -> Z) -> U -> H -> Z
+  psi f (x, y) h = (f (x + h, y) - f (x, y)) / h
+\end{spec}
+The limit application is then |lim (psi f (x, y)) 0 :: Z|.
+\end{enumerate}
